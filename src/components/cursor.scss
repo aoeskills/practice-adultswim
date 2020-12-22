@@ -1,14 +1,16 @@
-#cursor{
-  position:fixed;
-  width:8px;
-  height:8px;
-  background:white;
+#cursor {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background: #fff;
   border-radius: 4px;
-  mix-blend-mode:difference;
-  &.display{
-    display:inline-block;
+  mix-blend-mode: difference;
+
+  &.display {
+    display: inline-block;
   }
-  &.hidden{
-    display:none;
+
+  &.hidden {
+    display: none;
   }
 }
