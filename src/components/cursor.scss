@@ -1,5 +1,8 @@
+@import '@/template.scss';
+
 #cursor {
   position: fixed;
+  z-index: $CURSOR_Z_INDEX;
   width: 8px;
   height: 8px;
   background: #fff;
