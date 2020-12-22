@@ -1,10 +1,12 @@
 import React from 'react';
-import styles from './app.scss';
+import Background from '@/components/background';
 import Cursor from './cursor';
+import styles from './app.scss';
 
 const App = () => (
   <div id={styles.App}>
     <Cursor />
+    <Background />
   </div>
 );
 

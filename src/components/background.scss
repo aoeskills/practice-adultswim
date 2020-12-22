@@ -1,0 +1,52 @@
+$background-color: #f8f8f8;
+
+#background {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: $background-color;
+}
+
+#centerBox {
+  position: relative;
+  width: 320px;
+  min-width: 320px;
+  height: 192px;
+  overflow: hidden;
+}
+
+#backgroundVideo,
+#cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+#backgroundVideo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+
+  iframe {
+    flex: 120% 0 0;
+    height: 150%;
+  }
+}
+
+#cover {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+#svg path {
+  fill: $background-color;
+}
