@@ -23,6 +23,7 @@ module.exports = {
     extensions: ['.js', '.jsx'],
   },
   module: {
+    // js
     rules: [
       {
         test: /.js[x]?$/,
@@ -34,6 +35,7 @@ module.exports = {
           },
         },
       },
+      // saass
       {
         test: /\.(scss)$/,
         use: [
@@ -50,6 +52,18 @@ module.exports = {
             loader: 'sass-loader',
           },
         ],
+      },
+      // static assests
+      {
+        test: /\.(png)$/,
+        use: [
+          { loader: 'file-loader' },
+        ],
+      },
+      // svg to react component
+      {
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
       },
     ],
   },
