@@ -1,0 +1,36 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-rational-order",
+    "stylelint-config-prettier",
+    "stylelint-config-sass-guidelines"
+  ],
+  "plugins": [
+    "stylelint-scss",
+    "stylelint-order",
+    "stylelint-config-rational-order/plugin"
+  ],
+  "rules": {
+    "max-nesting-depth": 3,
+    "selector-max-id": 1,
+    "scss/dollar-variable-pattern":null,
+    "order/properties-alphabetical-order": null,
+    "scss/at-import-partial-extension-blacklist":["css","scss","sass"],
+    "order/order": [
+      "custom-properties",
+      "declarations"
+    ],
+    "order/properties-order": [],
+    "plugin/rational-order": [
+      true,
+      {
+        "border-in-box-model": false,
+        "empty-line-between-groups": false
+      }
+    ]
+  },
+  "ignoreFiles": [
+    "./node_modules/**/*.{css,scss,sass}",
+    "./dist/**/*.{css,scss,sass}"
+  ]
+}
