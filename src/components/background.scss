@@ -1,4 +1,6 @@
 $background-color: #f8f8f8;
+$logo-width: 320px;
+$logo-height: 192px;
 
 #background {
   position: absolute;
@@ -12,9 +14,9 @@ $background-color: #f8f8f8;
 
 #centerBox {
   position: relative;
-  width: 320px;
-  min-width: 320px;
-  height: 192px;
+  width: $logo-width;
+  min-width: $logo-width;
+  height: $logo-height;
   overflow: hidden;
 }
 
