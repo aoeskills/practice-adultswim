@@ -1,0 +1,26 @@
+@import '@/template.scss';
+
+#header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: $HEADER_Z_INDEX;
+  padding-top: 40px;
+  padding-left: 3%;
+}
+
+#logo {
+  width: 144px;
+  height: 32px;
+  margin-bottom: 4px;
+}
+
+#logo path {
+  fill: #333;
+}
+
+.descripion {
+  color: #888;
+  font-size: 14px;
+  line-height: 1.5em;
+}

@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import Logo from '@/images/logo.svg';
 import LogoCover from '@/images/logoCover.svg';
 import styles from './openning.scss';

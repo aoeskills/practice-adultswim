@@ -1,3 +1,4 @@
+@import '@/template.scss';
 @import '@/components/background.scss';
 
 $background-color: #333f;
@@ -11,6 +12,8 @@ $animation-phase1: 60%;
 $animation-phase2: 85%;
 
 #openning {
+  position: absolute;
+  z-index: $OPENNING_Z_INDEX;
   display: flex;
   align-items: center;
   justify-content: center;
