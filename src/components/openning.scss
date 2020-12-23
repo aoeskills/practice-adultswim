@@ -1,0 +1,167 @@
+@import '@/components/background.scss';
+
+$background-color: #333f;
+$background-color-transparent: #3330;
+@mixin animation-set($name) {
+  animation-name: $name;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+}
+$animation-phase1: 60%;
+$animation-phase2: 85%;
+
+#openning {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+// cover 遮罩
+#wipeOut {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0%;
+  height: 100%;
+  overflow: hidden;
+  @include animation-set(wipeOut);
+}
+
+#wipeOutChild {
+  float: right;
+  width: 100vw;
+  height: 100vh;
+}
+
+#pageCover {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+#pageCoverTop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(50% - #{$logo-height /2});
+  background: $background-color;
+}
+
+#pageCoverBottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: calc(50% - #{$logo-height /2});
+  background: $background-color;
+}
+
+#pageCoverLeft {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(50% - #{$logo-width /2});
+  height: 100%;
+  background: $background-color;
+}
+
+#pageCoverRight {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: calc(50% - #{$logo-width /2});
+  height: 100%;
+  background: $background-color;
+}
+
+#logoCover {
+  width: $logo-width;
+  min-width: $logo-width;
+}
+
+#logoCover path {
+  fill: $background-color;
+}
+
+
+// 中間描線Logo
+#logoContainer {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $logo-width;
+  min-width: $logo-width;
+  height: $logo-height;
+  @include animation-set(drawzoom);
+  
+}
+
+#logo {
+  flex: 100% 0 0;
+  width: 100%;
+  transform-origin: center;
+}
+
+#logo path {
+  @include animation-set(drawLogoPath);
+
+  fill: $background-color-transparent;
+  stroke-dasharray: 1500;
+}
+
+@keyframes wipeOut {
+  0% {
+    width: 100%;
+  }
+
+  #{$animation-phase2} {
+    width: 100%;
+  }
+
+  100% {
+    width: 0%;
+  }
+}
+@keyframes drawzoom {
+  0% {
+    width: ($logo-width * 1.2);
+    height: ($logo-height * 1.2);
+    background: $background-color;
+  }
+
+  #{$animation-phase1} {
+    width: $logo-width;
+    height: $logo-height;
+    background: $background-color;
+  }
+  #{$animation-phase2} {
+    background: $background-color-transparent;
+  }
+  
+}
+@keyframes drawLogoPath {
+  0% {
+    background: $background-color-transparent;
+    fill: $background-color;
+    stroke-dashoffset: 1500;
+  }
+
+  #{$animation-phase1} {
+    stroke-dashoffset: 0;
+    fill: $background-color;
+  }
+  #{$animation-phase2} {
+    background: $background-color-transparent;
+  }
+
+  100% {
+    fill: $background-color-transparent;
+  }
+}
