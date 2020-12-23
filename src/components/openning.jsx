@@ -1,16 +1,23 @@
-import React, { useEffect } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import Logo from '@/images/logo.svg';
 import LogoCover from '@/images/logoCover.svg';
 import styles from './openning.scss';
 
 const Openning = () => {
-  useEffect(() => {
-
+  const [isAnimationEnd, setIsAnimationEnd] = useState(false);
+  const animatedRef = useCallback((node) => {
+    if (node !== null) {
+      node.addEventListener('animationend', () => {
+        setIsAnimationEnd(true);
+      });
+    }
+    return node;
   });
+  if (isAnimationEnd) return (<div />);
   return (
     <div id={styles.openning}>
       {/* 擦出動畫 */}
-      <div id={styles.wipeOut}>
+      <div ref={animatedRef} id={styles.wipeOut}>
         <div id={styles.wipeOutChild}>
           {/* 遮罩頁面 */}
           <div id={styles.pageCover}>
