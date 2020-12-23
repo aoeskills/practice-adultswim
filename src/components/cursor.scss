@@ -3,18 +3,60 @@
 #cursor {
   position: fixed;
   z-index: $CURSOR_Z_INDEX;
-  width: 8px;
-  height: 8px;
-  background: #fff;
-  border-radius: 4px;
+  width: 0;
+  height: 0;
   mix-blend-mode: difference;
   pointer-events: none;
 
   &.display {
-    display: inline-block;
+    display: flex;
   }
 
   &.hidden {
     display: none;
+  }
+}
+
+$dot-size: 12px;
+
+#dot {
+  position: absolute;
+  top: $dot-size*-0.5;
+  left: $dot-size*-0.5;
+  width: $dot-size;
+  height: $dot-size;
+  background: #fff;
+  border-radius: $dot-size;
+  opacity: 1;
+  transition-duration: 0.2s;
+
+  &.hidden {
+    top: $dot-size*-0.5*0.5;
+    left: $dot-size*-0.5*0.5;
+    width: $dot-size*0.5;
+    height: $dot-size*0.5;
+  }
+}
+
+$flower-size: 25*8px;
+
+#flower {
+  position: absolute;
+  top: $flower-size*-0.5;
+  left: $flower-size*-0.5;
+  width: $flower-size;
+  height: $flower-size;
+  border: 1px solid #666;
+  border-radius: $flower-size;
+  transform: scale(0.5);
+  opacity: 1;
+  transition-duration: 0.1s;
+
+  &.hidden {
+    top: $flower-size*-0.25;
+    left: $flower-size*-0.25;
+    width: $flower-size*0.5;
+    height: $flower-size*0.5;
+    opacity: 0;
   }
 }

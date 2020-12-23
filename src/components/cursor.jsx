@@ -1,7 +1,13 @@
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import styles from './cursor.scss';
 
-const Cursor = () => {
+const mapToState = (state) => ({
+  isCursorFlowered: state.isCursorFlowered,
+});
+
+const Cursor = ({ isCursorFlowered }) => {
   const [pos, setPos] = useState({ x: 0, y: 0 });
   const [display, setDisplay] = useState(false);
 
@@ -30,13 +36,23 @@ const Cursor = () => {
       document.body.removeEventListener('mouseleave', leaveCallBack);
     };
   }, []);
+
   return (
     <div
       id={styles.cursor}
       className={display ? styles.display : styles.hidden}
       style={{ transform: `translate(${pos.x}px, ${pos.y}px)` }}
-    />
+    >
+      <div id={styles.dot} className={isCursorFlowered ? styles.hidden : ''} />
+
+      {/* 展開cursor，讓使用者的hover有反應 */}
+      <div id={styles.flower} className={!isCursorFlowered ? styles.hidden : ''} />
+    </div>
   );
 };
 
-export default Cursor;
+Cursor.propTypes = {
+  isCursorFlowered: PropTypes.bool.isRequired,
+};
+export default connect(mapToState)(Cursor);
+// export default Cursor;
