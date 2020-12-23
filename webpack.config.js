@@ -63,7 +63,17 @@ module.exports = {
       // svg to react component
       {
         test: /\.svg$/,
-        use: ['@svgr/webpack'],
+        use: [{
+          loader: '@svgr/webpack',
+          options: {
+            svgoConfig: {
+              plugins: {
+                removeViewBox: false,
+              },
+            },
+          },
+        }],
+
       },
     ],
   },
