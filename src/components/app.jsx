@@ -1,6 +1,6 @@
 import React from 'react';
 import Background from '@/components/background';
-import Cursor from './cursor';
+import Cursor from '@/components/cursor';
 import styles from './app.scss';
 
 const App = () => (
