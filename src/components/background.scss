@@ -21,6 +21,7 @@ $logo-height: 192px;
 }
 
 #backgroundVideo,
+#videoFilter,
 #cover {
   position: absolute;
   top: 0;
@@ -40,6 +41,10 @@ $logo-height: 192px;
     flex: 120% 0 0;
     height: 150%;
   }
+}
+
+#videoFilter {
+  background: #bbb3;
 }
 
 #cover {
