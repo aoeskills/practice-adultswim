@@ -35,7 +35,7 @@ const InteractiveButton = ({ children, flowerCursor, collpaseCursor }) => {
   }, []);
 
   return (
-    <div ref={buttonContainerRef}>
+    <div ref={buttonContainerRef} style={{ userSelect: 'none' }}>
       {children}
     </div>
   );
