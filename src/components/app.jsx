@@ -1,11 +1,11 @@
 import React from 'react';
-import Background from '@/components/background';
-import Cursor from '@/components/cursor';
-import Openning from '@/components/openning';
-import Body from '@/components/body';
+import Background from '@/components/ui/background';
+import Cursor from '@/components/ui/cursor';
+import Openning from '@/components/ui/openning';
+import Body from '@/components/ui/body';
+import Header from '@/components/ui/header';
+import Menu from '@/components/ui/menu';
 import styles from './app.scss';
-import Header from './header';
-import Menu from './menu';
 
 const App = () => (
   <div id={styles.App}>

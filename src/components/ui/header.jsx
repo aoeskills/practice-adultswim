@@ -2,8 +2,8 @@ import React from 'react';
 import Logo from '@/images/logo-fullname.svg';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import InteractiveButton from '@/components/ui/interactiveButton';
 import styles from './header.scss';
-import InteractiveButton from './interactiveButton';
 
 const mapToState = (state) => ({
   logoColorClass: state.logoColorClass,

@@ -1,10 +1,10 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import InteractiveButton from '@/components/interactiveButton';
-import NavItem from '@/components/navItem';
+import InteractiveButton from '@/components/ui/interactiveButton';
+import NavItem from '@/components/ui/navItem';
 import Logo from '@/images/logo.svg';
-import actions from '../redux/actions';
+import actions from '@/redux/actions';
 import styles from './menu.scss';
 
 const mapToDispatch = {

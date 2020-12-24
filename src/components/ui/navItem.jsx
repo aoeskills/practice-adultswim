@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import InteractiveButton from '@/components/ui/interactiveButton';
 import styles from './navItem.scss';
-import InteractiveButton from './interactiveButton';
 
 const NavItem = ({ link, children }) => (
   <InteractiveButton>
