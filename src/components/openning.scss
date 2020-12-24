@@ -1,8 +1,8 @@
 @import '@/template.scss';
 @import '@/components/background.scss';
 
-$background-color: #333f;
-$background-color-transparent: #3330;
+$background-color: #{$DARK_BACKGROUND}f;
+$background-color-transparent: #{$DARK_BACKGROUND}0;
 @mixin animation-set($name) {
   animation-name: $name;
   animation-duration: 1.5s;
