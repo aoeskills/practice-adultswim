@@ -1,0 +1,128 @@
+@import '@/template.scss';
+@import '@/components/background.scss';
+@import '@/components/navItem.scss';
+
+//burger
+#menuHandle {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  z-index: $HEADER_Z_INDEX;
+  width: 30px;
+  transform: translateY(-50%);
+
+  &:focus {
+    outline: none;
+  }
+
+  .buggerline {
+    width: 100%;
+    height: 1px;
+    margin-bottom: calc(35% - 1px);
+    background: #333;
+
+    &:last-of-type {
+      width: 70%;
+      margin-left: 30%;
+    }
+  }
+
+  &.triggered .buggerline {
+    background: #fff;
+    
+  }
+}
+
+#backgroundSVG {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: $HEADER_Z_INDEX;
+  width: $logo-width;
+  height: $logo-height;
+  transform: translate(-50%, -50%);
+
+  path {
+    fill: $DARK_BACKGROUND;
+    stroke: #aa0;
+  }
+}
+
+
+// menu
+#menu {
+  position: fixed;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: $DARK_BACKGROUND;
+  opacity: 0;
+  animation: menuFadeOut 0.3s linear;
+
+  &.display {
+    opacity: 1;
+    animation: menuFadeIn 0.3s linear;
+  }
+
+  &.displaynone {
+    display: none;
+  }
+}
+@keyframes menuFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+@keyframes menuFadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+#menuContent {
+  z-index: $HEADER_Z_INDEX;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  width: 1000px;
+  max-width: 100%;
+  counter-reset: $counterName;
+}
+
+#nav {
+  flex: 1;
+  margin: 0;
+  padding-top: 0;
+  padding-right: 10%;
+  padding-bottom: 0;
+  padding-left: 10%;
+}
+
+#infos {
+  flex: 1;
+  padding-right: 10%;
+  padding-left: 10%;
+  color: #ddd;
+  font-size: 16px;
+  line-height: 2em;
+}
+
+.info-line {
+  margin: 0;
+  padding: 0;
+}
+
+.info-link {
+  color: #fff;
+}
