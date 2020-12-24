@@ -2,7 +2,7 @@ import React from 'react';
 import Logo from '@/images/logo-fullname.svg';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import InteractiveButton from '@/components/ui/interactiveButton';
+import CursorTrigger from '@/components/ui/cursorTrigger';
 import styles from './header.scss';
 
 const mapToState = (state) => ({
@@ -11,11 +11,11 @@ const mapToState = (state) => ({
 
 const Header = ({ logoColorClass }) => (
   <div id={styles.header}>
-    <InteractiveButton>
+    <CursorTrigger>
       <a href="##">
         <Logo id={styles.logo} className={styles[logoColorClass]} />
       </a>
-    </InteractiveButton>
+    </CursorTrigger>
     <div className={styles.descripion}>
       Late night show
     </div>

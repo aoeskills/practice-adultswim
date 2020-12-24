@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import InteractiveButton from '@/components/ui/interactiveButton';
+import CursorTrigger from '@/components/ui/cursorTrigger';
 import NavItem from '@/components/ui/navItem';
 import Logo from '@/images/logo.svg';
 import actions from '@/redux/actions';
@@ -59,13 +59,13 @@ const Menu = ({ changeLogoColor }) => {
   return (
     <div>
       {/* 漢堡 */}
-      <InteractiveButton>
+      <CursorTrigger>
         <div role="button" tabIndex="-1" id={styles.menuHandle} className={displayMenu ? styles.triggered : ''} onClick={handleToggleMenu} onKeyPress={handleToggleMenu}>
           <div className={styles.buggerline} />
           <div className={styles.buggerline} />
           <div className={styles.buggerline} />
         </div>
-      </InteractiveButton>
+      </CursorTrigger>
 
       {/* menu本身 */}
       <div ref={menuRef} id={styles.menu} className={displayMenu ? styles.display : ''}>

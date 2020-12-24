@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import InteractiveButton from '@/components/ui/interactiveButton';
+import CursorTrigger from '@/components/ui/cursorTrigger';
 import styles from './navItem.scss';
 
 const NavItem = ({ link, children }) => (
-  <InteractiveButton>
+  <CursorTrigger>
     <a href={link} className={styles['nav-item']}>
       <li>
         {children}
       </li>
     </a>
-  </InteractiveButton>
+  </CursorTrigger>
 );
 
 NavItem.defaultProps = {
