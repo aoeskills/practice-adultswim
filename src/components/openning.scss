@@ -13,6 +13,8 @@ $animation-phase2: 85%;
 
 #openning {
   position: absolute;
+  top: 0;
+  left: 0;
   z-index: $OPENNING_Z_INDEX;
   display: flex;
   align-items: center;

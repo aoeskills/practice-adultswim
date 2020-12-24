@@ -7,7 +7,7 @@
   position: fixed;
   top: 50%;
   right: 20px;
-  z-index: $HEADER_Z_INDEX;
+  z-index: $HEADER_Z_INDEX+1;
   width: 30px;
   transform: translateY(-50%);
 
@@ -37,7 +37,6 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  z-index: $HEADER_Z_INDEX;
   width: $logo-width;
   height: $logo-height;
   transform: translate(-50%, -50%);
@@ -52,6 +51,9 @@
 // menu
 #menu {
   position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $HEADER_Z_INDEX;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -91,7 +93,7 @@
 }
 
 #menuContent {
-  z-index: $HEADER_Z_INDEX;
+  z-index: 2;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
