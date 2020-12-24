@@ -7,6 +7,10 @@ const actions = {
   uiCollapseCursor: () => ({
     type: actionTypes.UI_COLLAPSE_CURSOR,
   }),
+  uiChangeLogoColor: (colorName) => ({
+    type: actionTypes.UI_CHANGE_LOGO_COLOR,
+    colorName,
+  }),
 
 };
 

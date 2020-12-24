@@ -13,11 +13,22 @@
   width: 144px;
   height: 32px;
   margin-bottom: 4px;
+
+  path {
+    transition-duration: 0.2s;
+    fill: #333;
+  }
+
+  &.black path {
+    fill: #333;
+  }
+
+  &.white path {
+    fill: #fff;
+  }
+
 }
 
-#logo path {
-  fill: #333;
-}
 
 .descripion {
   color: #888;
