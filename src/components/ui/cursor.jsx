@@ -7,7 +7,7 @@ const mapToState = (state) => ({
   isCursorFlowered: state.isCursorFlowered,
 });
 
-const Cursor = ({ isCursorFlowered }) => {
+const Component = ({ isCursorFlowered }) => {
   const [pos, setPos] = useState({ x: 0, y: 0 });
   const [display, setDisplay] = useState(false);
 
@@ -51,8 +51,9 @@ const Cursor = ({ isCursorFlowered }) => {
   );
 };
 
-Cursor.propTypes = {
+Component.propTypes = {
   isCursorFlowered: PropTypes.bool.isRequired,
 };
-export default connect(mapToState)(Cursor);
-// export default Cursor;
+
+const Cursor = connect(mapToState)(Component);
+export default Cursor;

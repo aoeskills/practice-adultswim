@@ -15,7 +15,7 @@ const menuPropTypes = {
   changeLogoColor: PropTypes.func.isRequired,
 };
 
-const Menu = ({ changeLogoColor }) => {
+const Component = ({ changeLogoColor }) => {
   // 漢堡與menu互動需要用state溝通
   const [displayMenu, setDisplayMenu] = useState(false);
   const handleToggleMenu = (event) => {
@@ -111,5 +111,8 @@ const Menu = ({ changeLogoColor }) => {
   );
 };
 
-Menu.propTypes = menuPropTypes;
-export default connect(null, mapToDispatch)(Menu);
+Component.propTypes = menuPropTypes;
+
+const Menu = connect(null, mapToDispatch)(Component);
+
+export default Menu;

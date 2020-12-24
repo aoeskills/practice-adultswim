@@ -9,7 +9,7 @@ const mapToDispatch = {
 };
 
 // 游標進出cursorTrigger(互動按鈕)時改變ui state讓游標知道需要改變型態
-const CursorTrigger = ({ children, flowerCursor, collpaseCursor }) => {
+const Component = ({ children, flowerCursor, collpaseCursor }) => {
   // 設定ref與需要的監聽器
   const [buttonContainerDom, setButtonContainerDom] = useState(null);
   const buttonContainerRef = useCallback((node) => {
@@ -41,10 +41,12 @@ const CursorTrigger = ({ children, flowerCursor, collpaseCursor }) => {
   );
 };
 
-CursorTrigger.propTypes = {
+Component.propTypes = {
   children: PropTypes.node.isRequired,
   flowerCursor: PropTypes.func.isRequired,
   collpaseCursor: PropTypes.func.isRequired,
 };
 
-export default connect(null, mapToDispatch)(CursorTrigger);
+const CursorTrigger = connect(null, mapToDispatch)(Component);
+
+export default CursorTrigger;

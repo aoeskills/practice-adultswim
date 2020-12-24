@@ -9,7 +9,7 @@ const mapToState = (state) => ({
   logoColorClass: state.logoColorClass,
 });
 
-const Header = ({ logoColorClass }) => (
+const Component = ({ logoColorClass }) => (
   <div id={styles.header}>
     <CursorTrigger>
       <a href="##">
@@ -24,8 +24,11 @@ const Header = ({ logoColorClass }) => (
     </div>
   </div>
 );
-Header.propTypes = {
+
+Component.propTypes = {
   logoColorClass: PropTypes.string.isRequired,
 };
 
-export default connect(mapToState)(Header);
+const Header = connect(mapToState)(Component);
+
+export default Header;
