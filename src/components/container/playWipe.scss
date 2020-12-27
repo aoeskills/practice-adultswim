@@ -1,0 +1,52 @@
+@mixin animation-set($name) {
+  animation: $name 0.3s linear; 
+}
+
+.do-wipe {
+  position: relative;
+  display: block;
+}
+
+.container {
+  position: absolute;
+}
+
+// animation controll
+.wipe-in,
+.wipe-out {
+  position: absolute;
+  overflow: hidden;
+  transition-duration: 0.3s;
+
+}
+
+.wipe-in {
+  &.left {
+    top: 0;
+    left: 0;
+
+    .container {
+      left: 0;
+    }
+
+    &:not(.trans) {
+      width: 0 !important;
+    }
+  }
+
+}
+
+.wipe-out {
+  &.left {
+    top: 0;
+    right: 0;
+
+    .container {
+      right: 0;
+    }
+
+    &.trans {
+      width: 0 !important;
+    }
+  }
+}
