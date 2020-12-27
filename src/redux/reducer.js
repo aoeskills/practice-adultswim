@@ -1,6 +1,7 @@
 import actionTypes from '@/redux/actionTypes';
+import contentReducer from './content/reducer';
 
-const initalState = { isCursorFlowered: false, logoColorClass: 'black' };
+const initalState = { isCursorFlowered: false, logoColorClass: 'black', content: {} };
 
 const reducer = (state = initalState, action) => {
   switch (action.type) {
@@ -11,7 +12,9 @@ const reducer = (state = initalState, action) => {
       return { ...state, isCursorFlowered: false };
     case actionTypes.UI_CHANGE_LOGO_COLOR:
       return { ...state, logoColorClass: action.colorName };
-    default: return state;
+
+    default:
+      return { ...state, content: contentReducer(state.content, action) };
   }
 };
 
