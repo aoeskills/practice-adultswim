@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 const mapToState = (state) => ({
-  scrollTop: state.content.scrollTop,
+  scrollTop: state.ui.content.scrollTop,
 });
 // e04 兩個anti pattern
 // object prop is forbidden

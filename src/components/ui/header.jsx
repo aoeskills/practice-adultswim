@@ -6,7 +6,7 @@ import CursorTrigger from '@/components/ui/cursorTrigger';
 import styles from './header.scss';
 
 const mapToState = (state) => ({
-  logoColorClass: state.logoColorClass,
+  logoColorClass: state.ui.logoColorClass,
 });
 
 const Component = ({ logoColorClass }) => (

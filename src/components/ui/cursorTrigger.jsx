@@ -1,11 +1,11 @@
 import React, { useCallback, useState } from 'react';
 import PropTypes from 'prop-types';
-import actions from '@/redux/actions';
+import actions from '@/redux/ui/actions';
 import { connect } from 'react-redux';
 
 const mapToDispatch = {
-  flowerCursor: actions.uiFlowerCursor,
-  collpaseCursor: actions.uiCollapseCursor,
+  flowerCursor: actions.flowerCursor,
+  collpaseCursor: actions.collapseCursor,
 };
 
 // 游標進出cursorTrigger(互動按鈕)時改變ui state讓游標知道需要改變型態

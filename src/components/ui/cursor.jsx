@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import styles from './cursor.scss';
 
 const mapToState = (state) => ({
-  isCursorFlowered: state.isCursorFlowered,
+  isCursorFlowered: state.ui.isCursorFlowered,
 });
 
 const Component = ({ isCursorFlowered }) => {

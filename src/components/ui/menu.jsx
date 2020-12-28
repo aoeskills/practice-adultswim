@@ -4,11 +4,11 @@ import { connect } from 'react-redux';
 import CursorTrigger from '@/components/ui/cursorTrigger';
 import NavItem from '@/components/ui/navItem';
 import Logo from '@/images/logo.svg';
-import actions from '@/redux/actions';
+import actions from '@/redux/ui/actions';
 import styles from './menu.scss';
 
 const mapToDispatch = {
-  changeLogoColor: actions.uiChangeLogoColor,
+  changeLogoColor: actions.changeLogoColor,
 };
 
 const menuPropTypes = {

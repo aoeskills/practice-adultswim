@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import actions from '@/redux/content/actions';
+import actions from '@/redux/ui/actions';
 import { connect } from 'react-redux';
 import styles from './content.scss';
 
