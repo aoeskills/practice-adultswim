@@ -3,12 +3,41 @@
   justify-content: center;
   width: 100%;
   height: 100vh;
+  padding-top: 5vh;
+  padding-right: 5vw;
+  padding-bottom: 5vh;
+  padding-left: 5vw;
 
-  &.center {
+
+  // size
+  &.half {
+    width: 100%;
+    height: 50vh;
+  }
+
+  // horizontal align
+  &.h-center {
+    justify-content: center;
+  }
+
+  &.h-left {
+    justify-content: flex-start;
+  }
+
+  &.h-right {
+    justify-content: flex-end;
+  }
+
+  // vertical align
+  &.v-center {
     align-items: center;
   }
 
-  &.left {
+  &.v-top {
     align-items: flex-start;
+  }
+
+  &.v-bottom {
+    align-items: flex-end;
   }
 }
