@@ -1,9 +1,14 @@
 .header {
   margin: 0;
-  color: #fff;
+  color: #222;
   font-size: 9.3vw;
   font-family: sans-serif;
-  mix-blend-mode: difference;
+  white-space: nowrap;
+
+  &.diff {
+    color: #ccc;
+    mix-blend-mode: difference;
+  }
 }
 
 @media screen and (min-width: 1281px) {
