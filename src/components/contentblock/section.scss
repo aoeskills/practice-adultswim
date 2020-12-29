@@ -42,3 +42,20 @@
     align-items: flex-end;
   }
 }
+
+.titlebar {
+  position: absolute;
+  top: calc(1vh);
+  left: calc(50px + 5vw);
+  color: #333;
+
+  &::before {
+    position: absolute;
+    right: calc(100% + 8px);
+    display: inline-block;
+    color: #666;
+    content: '0' counter(section);
+    counter-increment: section;
+  }
+
+}
