@@ -9,12 +9,14 @@ const propTypes = {
   trans: PropTypes.bool,
   children: PropTypes.node.isRequired,
   duration: PropTypes.number,
+  delay: PropTypes.number,
 };
 const defaultProps = {
   isWipeOut: false,
   fromDirection: 'left',
   trans: false,
   duration: 0.3,
+  delay: 0,
 };
 
 /**
@@ -22,7 +24,7 @@ const defaultProps = {
  */
 const PlayWipe = ({
   isWipeOut, fromDirection, trans, children,
-  duration,
+  delay, duration,
 }) => {
   // 利用overflow:hidden完成動畫，需要知道children render後的高與寬
   // 有三層div包著children。第一層固定與父component的位置，第二層負責用overflow遮蓋，第三層負責讓children不會變形
@@ -47,7 +49,14 @@ const PlayWipe = ({
     <div className={styles['do-wipe']} style={fullSizeStyle}>
       <div
         className={`${isWipeOut ? styles['wipe-out'] : styles['wipe-in']} ${styles[fromDirection]} ${(trans && isRendered) ? styles.trans : ''}`}
-        style={{ ...fullSizeStyle, transitionDuration: `${duration}s` }}
+        style={
+          {
+            ...fullSizeStyle,
+
+            transitionDelay: `${delay}s`,
+            transitionDuration: `${duration}s`,
+          }
+        }
       >
         <div ref={containerRef} className={styles.container}>
           {children}
