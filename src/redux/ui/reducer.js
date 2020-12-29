@@ -1,6 +1,6 @@
 import actionTypes from './actionTypes';
 
-const initalState = { isCursorFlowered: false, logoColorClass: 'black', content: {} };
+const initalState = { isCursorFlowered: false, logoColorClass: 'black', content: { scrollTop: 0 } };
 
 const reducer = (state = initalState, action) => {
   switch (action.type) {

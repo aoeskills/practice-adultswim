@@ -32,6 +32,7 @@ const Component = ({
 
   const state = {
     isEnterScreen,
+    contentScrollTop: scrollTop,
   };
   const newMidProps = stateToMidProp(state);
   const midProps = { ...defMidProps, ...newMidProps };
