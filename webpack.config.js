@@ -55,7 +55,7 @@ module.exports = {
       },
       // static assests
       {
-        test: /\.(png)$/,
+        test: /\.(png|jpg|jpeg|webm|bmp|gif)$/i,
         use: [
           { loader: 'file-loader' },
         ],
