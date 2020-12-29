@@ -45,6 +45,12 @@
     fill: $DARK_BACKGROUND;
     stroke: #aa0;
   }
+  @media screen and (max-width: 768px) {
+    path {
+      fill: $DARK_BACKGROUND;
+      stroke: #464605;
+    }
+  }
 }
 
 

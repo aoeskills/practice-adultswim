@@ -50,7 +50,7 @@ $flower-size: 25*8px;
   border-radius: $flower-size;
   transform: scale(0.5);
   opacity: 0.4;
-  transition-duration: 0.1s;
+  transition-duration: 0.4s;
 
   &.hidden {
     top: $flower-size*-0.25;
