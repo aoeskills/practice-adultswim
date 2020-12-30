@@ -1,0 +1,8 @@
+.play-fade {
+  opacity: 0;
+  transition-duration: 0.3s;
+
+  &.trans {
+    opacity: 1;
+  }
+}

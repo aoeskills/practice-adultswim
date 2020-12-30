@@ -1,0 +1,10 @@
+.play-fly-text {
+  letter-spacing: 40px;
+  opacity: 0;
+  transition-duration: 0.3s;
+
+  &.trans {
+    letter-spacing: 0;
+    opacity: 1;
+  }
+}
