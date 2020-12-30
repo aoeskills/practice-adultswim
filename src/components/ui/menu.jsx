@@ -73,11 +73,11 @@ const Component = ({ changeLogoColor }) => {
         <Logo id={styles.backgroundSVG} />
         <div id={styles.menuContent}>
           <ul id={styles.nav}>
+            <NavItem link="#service">
+              SERVICE
+            </NavItem>
             <NavItem link="#show">
               SHOWS
-            </NavItem>
-            <NavItem link="#music">
-              MUSIC
             </NavItem>
             <NavItem link="#podcast">
               PODCAST
