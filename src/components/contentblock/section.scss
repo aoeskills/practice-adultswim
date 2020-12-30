@@ -1,4 +1,4 @@
-.full-page {
+.section {
   position: relative;
   display: flex;
   justify-content: center;
@@ -40,6 +40,10 @@
 
   &.v-bottom {
     align-items: flex-end;
+  }
+
+  &.padding {
+    padding-bottom: 40vh;
   }
 }
 

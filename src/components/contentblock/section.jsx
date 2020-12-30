@@ -7,10 +7,16 @@ import styles from './section.scss';
  * 提供 alignH 設定水平對齊位置，有center與left兩個選項
  */
 const Section = ({
-  children, size, alignH, alignV, title,
+  children, size, alignH, alignV, title, padding,
 }) => (
   <div
-    className={`${styles['full-page']} ${styles[size]} ${styles[`v-${alignV}`]} ${styles[`h-${alignH}`]}`}
+    className={`
+    ${styles.section}
+    ${styles[size]}
+    ${styles[`v-${alignV}`]}
+    ${styles[`h-${alignH}`]}
+    ${padding ? styles.padding : ''}
+    `}
   >
     {title !== '' ? <div className={styles.titlebar}>{title}</div> : null}
     {children}
@@ -23,6 +29,7 @@ Section.propTypes = {
   alignH: PropTypes.string,
   alignV: PropTypes.string,
   title: PropTypes.string,
+  padding: PropTypes.bool,
 };
 Section.defaultProps = {
   children: '',
@@ -30,6 +37,7 @@ Section.defaultProps = {
   alignH: 'center',
   alignV: 'center',
   title: '',
+  padding: true,
 };
 
 export default Section;
