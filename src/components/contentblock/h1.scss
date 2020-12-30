@@ -1,24 +1,14 @@
+@import '@/template.scss';
+
 .header {
+  @include font-large();
+
   margin: 0;
   color: #222;
-  font-size: 9.3vw;
   font-family: sans-serif;
-  white-space: nowrap;
 
   &.diff {
     color: #ccc;
     mix-blend-mode: difference;
-  }
-}
-
-@media screen and (min-width: 1281px) {
-  .header {
-    font-size: 120px;
-  }
-}
-
-@media screen and (max-width: 430px) {
-  .header {
-    font-size: 40px;
   }
 }
