@@ -1,0 +1,61 @@
+@import '@/template.scss';
+
+.guild-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3em;
+  font-size: 12px;
+  text-decoration: none;
+
+  .motion-line {
+    position: relative;
+    display: block;
+    width: 70px;
+    height: 1px;
+    margin-right: 8px;
+    overflow: hidden;
+
+    &::before,
+    &::after {
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background: $DARK_BACKGROUND;
+      content: '';
+    }
+
+    &::before {
+      width: 100%;
+      animation: motionloop 1.2s linear;
+      animation-iteration-count: infinite;
+    }
+
+    &::after {
+      width: 0%;
+      transition-duration: 0.3s;
+    }
+  }
+
+  &:hover .motion-line::after {
+    width: 100%;
+  }
+
+}
+
+@keyframes motionloop {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.content {
+  color: #333;
+  font-weight: bold;
+  font-size: inherit;
+  white-space: nowrap;
+}

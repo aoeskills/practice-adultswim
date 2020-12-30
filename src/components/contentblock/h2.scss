@@ -1,0 +1,9 @@
+@import '@/template.scss';
+
+.h2 {
+  @include font-mid();
+
+  margin: 0;
+  margin-bottom: 0.8em;
+  padding: 0;
+}

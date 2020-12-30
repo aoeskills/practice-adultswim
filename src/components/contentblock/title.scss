@@ -1,0 +1,21 @@
+@import '@/template.scss';
+
+.title,
+.title-small,
+.title-large {
+  margin: 1em 0;
+  color: #333;
+  font-weight: bold;
+}
+
+.title-small {
+  font-size: 20px;
+}
+
+.title {
+  @include font-mid();
+}
+
+.title-large {
+  @include font-large();
+}

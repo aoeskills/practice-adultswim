@@ -1,0 +1,58 @@
+.full-wide,
+.half-wide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  // horizontal align
+  &.h-center {
+    justify-content: center;
+  }
+
+  &.h-left {
+    justify-content: flex-start;
+  }
+
+  &.h-right {
+    justify-content: flex-end;
+  }
+
+  // vertical align
+  &.v-center {
+    align-items: center;
+  }
+
+  &.v-top {
+    align-items: flex-start;
+  }
+
+  &.v-bottom {
+    align-items: flex-end;
+  }
+
+  // wrap
+  &.wrap {
+    flex-wrap: wrap;
+  }
+
+  &.nowrap {
+    flex-wrap: nowrap;
+  }
+}
+
+.full-wide {
+  flex: 100% 0 0;
+  width: 100%;
+}
+
+.half-wide {
+  flex: 50% 0 0;
+  width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .half-wide {
+    flex: 100% 0 0;
+    width: 100%;
+  }
+}
