@@ -29,6 +29,10 @@
 
 }
 
+body[data-theme='dark'] #logo path {
+  fill: #fff;
+}
+
 
 .descripion {
   color: #888;

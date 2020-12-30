@@ -13,6 +13,7 @@ $DARK_BACKGROUND: #222;
   color: #222;
   font-weight: bold;
   font-size: 9.3vw;
+  transition-duration: 0.3s;
   @media (min-width: 1281px) {
     font-size: 120px;
   }
@@ -29,6 +30,7 @@ $DARK_BACKGROUND: #222;
   color: #333;
   font-weight: bold;
   font-size: 5vw;
+  transition-duration: 0.3s;
   @media (min-width: 1281px) {
     font-size: 64px;
   }

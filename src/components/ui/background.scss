@@ -1,3 +1,5 @@
+@import '@/template.scss';
+
 $background-color: #f2f2f2;
 $logo-width: 320px;
 $logo-height: 192px;
@@ -10,6 +12,7 @@ $logo-height: 192px;
   width: 100%;
   height: 100%;
   background: $background-color;
+  transition-duration: 0.3s;
 }
 
 #centerBox {
@@ -55,5 +58,17 @@ $logo-height: 192px;
 }
 
 #svg path {
+  transition-duration: 0.3s;
   fill: $background-color;
+}
+
+body[data-theme='dark'] {
+  #background {
+    background: $DARK_BACKGROUND;
+  }
+
+  #svg path {
+    fill: $DARK_BACKGROUND;
+  }
+
 }

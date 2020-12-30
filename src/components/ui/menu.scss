@@ -134,3 +134,8 @@
 .info-link {
   color: #fff;
 }
+
+
+body[data-theme='dark'] #menuHandle .buggerline {
+  background: #fff;
+}

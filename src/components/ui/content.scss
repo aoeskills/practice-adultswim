@@ -28,6 +28,15 @@
 #scrollFill {
   width: 100%;
   background: #333;
+}
 
+body[data-theme='dark'] {
+  #scroll {
+    background: #444;
+  }
 
+  #scrollFill {
+    background: #fff;
+  }
+  
 }
