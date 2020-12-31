@@ -1,5 +1,6 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: './src/index.jsx',
@@ -15,6 +16,12 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: './index.css',
     }),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: 'public' },
+      ],
+    }),
+
   ],
   resolve: {
     alias: {
