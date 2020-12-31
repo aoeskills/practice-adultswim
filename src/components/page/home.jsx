@@ -29,7 +29,7 @@ const Home = () => {
   });
 
   return (
-    <div>
+    <div style={{ counterReset: 'section' }}>
       <Section padding={false}>
         <ListenContentScroll
           MidComponent={PlayFade}
