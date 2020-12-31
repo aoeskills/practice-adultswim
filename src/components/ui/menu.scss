@@ -20,6 +20,7 @@
     height: 1px;
     margin-bottom: calc(35% - 1px);
     background: #333;
+    transition-duration: 0.3s;
 
     &:last-of-type {
       width: 70%;

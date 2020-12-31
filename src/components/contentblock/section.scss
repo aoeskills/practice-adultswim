@@ -1,14 +1,14 @@
+@import '@/template.scss';
 
 .section ,
 .section-background {
   display: flex;
   justify-content: center;
   width: 100%;
-  min-height: 100vh;
   padding-top: 5vh;
-  padding-right: calc(50px + 5vw);
+  padding-right: calc(16vw - 32px);
   padding-bottom: 5vh;
-  padding-left: calc(50px + 5vw);
+  padding-left: calc(16vw - 32px);
 
 
   // size
@@ -50,7 +50,7 @@
 
 .section {
   position: relative;
-  z-index: 1;
+  z-index: $SECTION_Z_INDEX;
   min-height: 100vh;
 }
 
@@ -69,6 +69,10 @@
     right: calc(100% + 8px);
     display: inline-block;
     color: #666;
+    @media (max-width: 768px) {
+      bottom: calc(100% + 8px);
+      left: 0;
+    }
   }
 
   &[data-number]::before {
