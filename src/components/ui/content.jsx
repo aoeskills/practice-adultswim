@@ -24,14 +24,15 @@ const Component = ({ update, children }) => {
   const handleScroll = () => {
     if (ref.current === null) return;
     const node = ref.current;
+    const scrollOnEnd = (node.scrollTop > (node.scrollHeight - node.offsetHeight - 10));
     setPercent(
       Math.ceil((node.scrollTop * 100) / (node.scrollHeight - node.offsetHeight)),
     );
     // 更新state
-    update({ scrollTop: node.scrollTop });
+    update({ scrollTop: node.scrollTop, scrollOnEnd });
 
     // 偵測是否要變換主題
-    if (node.scrollTop > (node.scrollHeight - node.offsetHeight - 10)) document.body.setAttribute('data-theme', 'dark');
+    if (scrollOnEnd) document.body.setAttribute('data-theme', 'dark');
     else document.body.removeAttribute('data-theme');
   };
   useEffect(() => {
