@@ -86,15 +86,15 @@ const Home = () => {
             </div>
           </Flex.HalfWide>
           <Flex.FullWide alignH="right">
-            <ListenContentScroll
-              MidComponent={PlayFlyText}
-              defMidProps={{ trans: false, delay: 0.2, duration: 1.2 }}
-              stateToMidProp={listenStateToPlayProps}
-            >
-              <LightText>
-                What we have
-              </LightText>
-            </ListenContentScroll>
+            <LightText>
+              <ListenContentScroll
+                MidComponent={PlayFlyText}
+                defMidProps={{ trans: false, delay: 0.2, duration: 0.2 }}
+                stateToMidProp={listenStateToPlayProps}
+              >
+                {'What we have'.split('')}
+              </ListenContentScroll>
+            </LightText>
           </Flex.FullWide>
           <Flex.FullWide alignH="right">
             <GuildLink url="#service">View Service</GuildLink>
@@ -131,17 +131,16 @@ const Home = () => {
           </Flex.FullWide>
 
           <Flex.FullWide alignH="right">
-            <ListenContentScroll
-              MidComponent={PlayFlyText}
-              defMidProps={{ trans: false, delay: 0.2, duration: 1.2 }}
-              stateToMidProp={listenStateToPlayProps}
-            >
-              <LightText>
-                Shows
-              </LightText>
-            </ListenContentScroll>
-          </Flex.FullWide>
-          <Flex.FullWide alignH="right">
+            <LightText>
+              <ListenContentScroll
+                MidComponent={PlayFlyText}
+                defMidProps={{ trans: false, delay: 0.2, duration: 0.2 }}
+                stateToMidProp={listenStateToPlayProps}
+              >
+                {'Shows'.split('')}
+              </ListenContentScroll>
+            </LightText>
+
             <GuildLink url="#shows">View Shows</GuildLink>
           </Flex.FullWide>
         </Flex.FullWide>
@@ -180,13 +179,15 @@ const Home = () => {
           </Flex.FullWide>
 
           <Flex.FullWide alignH="left">
-            <ListenContentScroll
-              MidComponent={PlayFlyText}
-              defMidProps={{ trans: false, delay: 0.2, duration: 1.2 }}
-              stateToMidProp={listenStateToPlayProps}
-            >
-              <LightText>ABOUT US</LightText>
-            </ListenContentScroll>
+            <LightText>
+              <ListenContentScroll
+                MidComponent={PlayFlyText}
+                defMidProps={{ trans: false, delay: 0.2, duration: 0.2 }}
+                stateToMidProp={listenStateToPlayProps}
+              >
+                {'About us'.split('')}
+              </ListenContentScroll>
+            </LightText>
           </Flex.FullWide>
 
           <Flex.FullWide alignH="right">
@@ -196,37 +197,21 @@ const Home = () => {
       </Section>
 
       <Section title="Support us" padding={false} size="half">
-        <ListenContentScroll
-          MidComponent={PlayWipe}
-          defMidProps={{ trans: false, delay: 0.2, duration: 0.8 }}
-          stateToMidProp={listenStateToPlayProps}
-        >
-          <H2>Subscribe</H2>
-        </ListenContentScroll>
-      </Section>
+        <a href="#subscrib">
+          <Title.Large>
+            <CursorTrigger>
+              <ListenContentScroll
+                MidComponent={PlayFlyText}
+                defMidProps={{ trans: false, delay: 0.2, duration: 0.2 }}
+                stateToMidProp={listenStateToPlayProps}
+              >
+                {'Subscrib'.split('')}
+              </ListenContentScroll>
+            </CursorTrigger>
 
-      <Section padding={false} title="What we have">
-        <div style={{
-          flex: '50% 0 0',
-          width: '50%',
-        }}
-        >
-          <Title>Service</Title>
-        </div>
-        <div style={{
-          flex: '50% 0 0',
-          width: '50%',
-          textAlign: 'right',
-        }}
-        >
-          <CursorTrigger>
-            <a href="#service" style={{ textDecoration: 'none' }}>
-              <Title>
-                Next
-              </Title>
-            </a>
-          </CursorTrigger>
-        </div>
+          </Title.Large>
+        </a>
+      </Section>
 
       </Section>
     </div>

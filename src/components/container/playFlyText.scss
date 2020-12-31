@@ -1,10 +1,43 @@
-.play-fly-text {
-  letter-spacing: 40px;
+@mixin start-state {
+  transform: translateX(1em);
   opacity: 0;
-  transition-duration: 0.3s;
+}
+
+@mixin end-state {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.single-text {
+  @include start-state();
+
+  display: inline-block;
+  min-width: 0.5em;
+  animation: fly-in 0.4s ease-out;
 
   &.trans {
-    letter-spacing: 0;
-    opacity: 1;
+    @include end-state();
+
+    animation: fly-out 0.4s ease-out;
+  }
+}
+
+@keyframes fly-in {
+  from {
+    @include end-state();
+  }
+
+  to {
+    @include start-state();
+  }
+}
+
+@keyframes fly-out {
+  from {
+    @include start-state();
+  }
+
+  to {
+    @include end-state();
   }
 }
