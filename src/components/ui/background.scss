@@ -47,7 +47,11 @@ $logo-height: 192px;
 }
 
 #videoFilter {
-  background: #bbb3;
+  background: rgba(187, 187, 187, 0.2);
+
+  &.strong {
+    background: rgba(232, 232, 232 , 0.85);
+  }
 }
 
 #cover {
