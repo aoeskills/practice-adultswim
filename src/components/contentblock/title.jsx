@@ -1,9 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import themeStyles from '@/template.scss';
 import styles from './title.scss';
-
-console.log(themeStyles);
 
 const propTypes = {
   children: PropTypes.node.isRequired,
