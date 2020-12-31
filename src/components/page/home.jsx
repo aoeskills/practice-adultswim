@@ -17,6 +17,8 @@ import bobsBurgersCover from '@/images/bobs-burgers-cover.jpg';
 import PhotoCover from '@/components/contentblock/photoCover';
 import Title from '@/components/contentblock/title';
 import CursorTrigger from '@/components/ui/cursorTrigger';
+import SectionBackground from '@/components/contentblock/sectionBackground';
+import SectionTitle from '@/components/contentblock/sectionTitle';
 
 /**
  * 首頁
@@ -100,6 +102,18 @@ const Home = () => {
       </Section>
 
       <Section title="Contents" alignV="top">
+        <SectionBackground>
+          <LightText>
+            <ListenContentScroll
+              MidComponent={PlayFlyText}
+              defMidProps={{ trans: false, delay: 0.2, duration: 0.2 }}
+              stateToMidProp={listenStateToPlayProps}
+            >
+              {'Shows'.split('')}
+            </ListenContentScroll>
+          </LightText>
+
+        </SectionBackground>
         <Flex.FullWide wrap>
           <Flex.FullWide alignH="left">
             <ListenContentScroll
@@ -129,16 +143,6 @@ const Home = () => {
           </Flex.FullWide>
 
           <Flex.FullWide alignH="right">
-            <LightText>
-              <ListenContentScroll
-                MidComponent={PlayFlyText}
-                defMidProps={{ trans: false, delay: 0.2, duration: 0.2 }}
-                stateToMidProp={listenStateToPlayProps}
-              >
-                {'Shows'.split('')}
-              </ListenContentScroll>
-            </LightText>
-
             <GuildLink url="#shows">View Shows</GuildLink>
           </Flex.FullWide>
         </Flex.FullWide>
@@ -211,6 +215,33 @@ const Home = () => {
         </a>
       </Section>
 
+      <Section padding={false}>
+        <Flex.FullWide wrap>
+          <Flex.FullWide alignH="left">
+            <SectionTitle number="01"> What we have </SectionTitle>
+          </Flex.FullWide>
+          <div style={{
+            flex: '50% 0 0',
+            width: '50%',
+          }}
+          >
+            <Title>Service</Title>
+          </div>
+          <div style={{
+            flex: '50% 0 0',
+            width: '50%',
+            textAlign: 'right',
+          }}
+          >
+            <CursorTrigger>
+              <a href="#service" style={{ textDecoration: 'none' }}>
+                <Title>
+                  Next
+                </Title>
+              </a>
+            </CursorTrigger>
+          </div>
+        </Flex.FullWide>
       </Section>
     </div>
   );
