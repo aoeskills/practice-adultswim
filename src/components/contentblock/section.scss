@@ -1,5 +1,6 @@
-.section {
-  position: relative;
+
+.section ,
+.section-background {
   display: flex;
   justify-content: center;
   width: 100%;
@@ -47,10 +48,20 @@
   }
 }
 
-.titlebar {
+.section {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+}
+
+.section-background {
   position: absolute;
-  top: calc(1vh);
-  left: calc(50px + 5vw);
+  z-index: -1;
+  height: 100%;
+}
+
+.titlebar {
+  position: relative;
   color: #333;
 
   &::before {
@@ -58,8 +69,28 @@
     right: calc(100% + 8px);
     display: inline-block;
     color: #666;
+  }
+
+  &[data-number]::before {
+    content: attr(data-number);
+  }
+
+  &:not([data-number]) {
+    position: absolute;
+    top: calc(1vh);
+    left: calc(16vw - 32px);
+  }
+
+  &:not([data-number])::before {
     content: '0' counter(section);
     counter-increment: section;
   }
+}
 
+body[data-theme='dark'] .titlebar {
+  color: #bbb;
+
+  &::before {
+    color: #bbb;
+  }
 }
