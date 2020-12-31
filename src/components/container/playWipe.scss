@@ -1,52 +1,35 @@
-@mixin animation-set($name) {
-  animation: $name 0.3s linear; 
-}
-
-.do-wipe {
-  position: relative;
-  display: block;
-}
-
-.container {
-  position: absolute;
-}
-
-// animation controll
-.wipe-in,
-.wipe-out {
-  position: absolute;
-  overflow: hidden;
-  transition-duration: 0.3s;
-
+@mixin fullsize {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
 .wipe-in {
+  transition-duration: 0.3s;
+
   &.left {
-    top: 0;
-    left: 0;
-
-    .container {
-      left: 0;
-    }
-
-    &:not(.trans) {
-      width: 0 !important;
-    }
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
   }
 
+  &.right {
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  }
+
+  &.trans {
+    @include fullsize();
+  }
 }
 
 .wipe-out {
-  &.left {
-    top: 0;
-    right: 0;
+  @include fullsize();
 
-    .container {
-      right: 0;
+  transition-duration: 0.3s;
+
+  &.trans {
+    &.left {
+      clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
     }
 
-    &.trans {
-      width: 0 !important;
+    &.right {
+      clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
     }
   }
 }

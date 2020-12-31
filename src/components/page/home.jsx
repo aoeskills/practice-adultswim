@@ -16,7 +16,6 @@ import primalCover from '@/images/primal-cover.jpg';
 import bobsBurgersCover from '@/images/bobs-burgers-cover.jpg';
 import PhotoCover from '@/components/contentblock/photoCover';
 import Title from '@/components/contentblock/title';
-import StraightText from '@/components/contentblock/straightText';
 import CursorTrigger from '@/components/ui/cursorTrigger';
 
 /**
@@ -57,16 +56,13 @@ const Home = () => {
             <div>
               <ListenContentScroll
                 MidComponent={PlayWipe}
-                defMidProps={{ trans: false, delay: 0.2, duration: 0.8 }}
+                defMidProps={{
+                  fromDirection: 'right', trans: false, delay: 0.2, duration: 0.8,
+                }}
                 stateToMidProp={listenStateToPlayProps}
               >
                 <H2>
-                  <StraightText>
-                    {'Hit me with '}
-                  </StraightText>
-                  <StraightText>
-                    your pet shark!
-                  </StraightText>
+                  Hit me with your pet shark!
                 </H2>
               </ListenContentScroll>
 
@@ -108,7 +104,9 @@ const Home = () => {
           <Flex.FullWide alignH="left">
             <ListenContentScroll
               MidComponent={PlayWipe}
-              defMidProps={{ trans: false, delay: 0.2, duration: 0.8 }}
+              defMidProps={{
+                fromDirection: 'right', trans: false, delay: 0.2, duration: 0.8,
+              }}
               stateToMidProp={listenStateToPlayProps}
             >
               <H2>SHOWS</H2>
@@ -157,7 +155,7 @@ const Home = () => {
               stateToMidProp={listenStateToPlayProps}
             >
               <H2>
-                <StraightText>Mary plays the piano.</StraightText>
+                Mary plays the piano.
               </H2>
             </ListenContentScroll>
 
