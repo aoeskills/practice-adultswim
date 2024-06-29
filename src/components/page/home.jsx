@@ -64,7 +64,7 @@ const Home = () => {
                 stateToMidProp={listenStateToPlayProps}
               >
                 <H2>
-                  Hit me with your pet shark!
+                  Hit me with your pet shark!!
                 </H2>
               </ListenContentScroll>
 
